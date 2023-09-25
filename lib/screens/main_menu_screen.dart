@@ -43,7 +43,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "經典遊戲 - 2048",
+                          "經典 - 2048",
                           style: TextStyle(
                             color: appMainColor,
                             fontSize: width * .12,
@@ -53,7 +53,8 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                         Column(
                           children: [
                             MenuButton(
-                                assetPath: "assets/images/svg/play-game.svg",
+                                assetPath:
+                                    "assets/images/svg/play-circle-svgrepo-com.svg",
                                 buttonText: "遊玩",
                                 onPressed: () async {
                                   if (settingsModel.soundActivated)
@@ -67,8 +68,9 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                                 }),
                             SizedBox(height: width * .05),
                             MenuButton(
-                                assetPath: "assets/images/svg/sound-adjust.svg",
-                                buttonText: "調教聲音",
+                                assetPath:
+                                    "assets/images/svg/adjust-svgrepo-com.svg",
+                                buttonText: "調整聲音",
                                 onPressed: () async {
                                   if (settingsModel.soundActivated)
                                     await player.play(
@@ -88,6 +90,25 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                             fontSize: width * .08,
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                        // 新增的footer部分
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed(
+                                '/privacy'); // 假設'/privacy'是你的privacy.dart的路由名稱
+                          },
+                          child: Padding(
+                            padding:
+                                EdgeInsets.only(top: 20.0), // 根據需要調整padding
+                            child: Text(
+                              "隱私政策",
+                              style: TextStyle(
+                                color: Colors.grey, // 你可以選擇適合的顏色
+                                fontSize: width * .05,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
                           ),
                         ),
                       ],

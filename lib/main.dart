@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:game_2048/shared/app_audios.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:flame_audio/flame_audio.dart';
+import 'package:game_2048/privacy.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/home", page: () => MainMenuScreen()),
         GetPage(name: "/play", page: () => GamePlayScreen()),
-        GetPage(name: "/sound", page: () => SoundScreen())
+        GetPage(name: "/sound", page: () => SoundScreen()),
+        GetPage(name: "/privacy", page: () => PrivacyPolicyPage())
       ],
       onInit: () async {
         try {
