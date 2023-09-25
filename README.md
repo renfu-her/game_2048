@@ -1,3 +1,4 @@
 # game_2048
 
-A new Flutter project.
+## 2048 game in Flutter
+
