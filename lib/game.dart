@@ -81,7 +81,7 @@ class Game2048 extends FlameGame with PanDetector, HasTappables {
         buttonSize: Vector2(size.x * .5, size.x * .16),
         fontSize: size.x * .07,
         onTap: gameModel.newGame,
-        buttonText: "New Game",
+        buttonText: "新遊戲",
         position: Vector2(size.x * .5, size.y * .07),
         buttonColor: appBrownyOrange,
         textColor: appTextColor1);

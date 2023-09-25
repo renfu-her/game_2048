@@ -14,7 +14,7 @@ class ScoreComponent extends TextComponent with HasGameRef<Game2048> {
   @override
   Future<void> onLoad() async {
     this.text =
-        "${scoreType == ScoreType.MaxTile ? "Max" : "Score"} ${scoreType == ScoreType.MaxTile ? "Max" : "Score"}?gameRef.gameModel.currentScore:gameRef.gameModel.currentScore}";
+        "${scoreType == ScoreType.MaxTile ? "最大" : "分數"} ${scoreType == ScoreType.MaxTile ? "Max" : "Score"}?gameRef.gameModel.currentScore:gameRef.gameModel.currentScore}";
     this.textRenderer = TextPaint(
         style: TextStyle(
             color: appTextColor1,
@@ -28,6 +28,6 @@ class ScoreComponent extends TextComponent with HasGameRef<Game2048> {
   void update(double dt) {
     super.update(dt);
     this.text =
-        "${scoreType == ScoreType.MaxTile ? "Max" : "Score"} : ${scoreType == ScoreType.MaxTile ? gameRef.gameModel.currentMaxTileValue : gameRef.gameModel.currentScore}";
+        "${scoreType == ScoreType.MaxTile ? "最大" : "分數"} : ${scoreType == ScoreType.MaxTile ? gameRef.gameModel.currentMaxTileValue : gameRef.gameModel.currentScore}";
   }
 }

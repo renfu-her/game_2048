@@ -44,7 +44,7 @@ class _SoundScreenState extends State<SoundScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Sound Volume",
+                  "音 量",
                   style: TextStyle(
                       color: appMainColor,
                       fontSize: width * .09,
@@ -85,7 +85,7 @@ class _SoundScreenState extends State<SoundScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Sound Enabled",
+                      "開啓聲音",
                       style: TextStyle(
                           color: appMainColor,
                           fontWeight: FontWeight.bold,
@@ -123,7 +123,7 @@ class _SoundScreenState extends State<SoundScreen> {
                 ),
                 MenuButton(
                     assetPath: "assets/images/svg/save.svg",
-                    buttonText: "Save",
+                    buttonText: "儲存",
                     onPressed: () async {
                       if (settingsModel.soundActivated)
                         await player.play(
